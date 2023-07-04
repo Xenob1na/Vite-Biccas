@@ -7,12 +7,101 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/animate.css">
     <title>Biccas</title>
   </head>
   <body>
     <div id="app">
-      <header id="head"></header>
+      <header id="head" class="wow tada">
+        <div class="max-w-[1180px] mx-auto mt-8">
+          <div class="flex justify-between items-center">
+              <div>
+                <h4 class="text-[#54BD95] text-[50px] font-semibold"><a href="/">Biccas</a></h4>
+              </div>
+              <nav class="items-center">
+                <ul class="flex gap-10 items-center">
+                  <li class="text-[18px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] delay-[100ms] transition-all"><a href="#Home">Home</a></li>
+                  <li class="text-[18px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] delay-[100ms] transition-all"><a href="#Product">Product</a></li>
+                  <li class="text-[18px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] delay-[100ms] transition-all"><a href="#FAQ">FAQ</a></li>
+                  <li class="text-[18px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] delay-[100ms] transition-all"><a href="#Blog">Blog</a></li>
+                  <li class="text-[18px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] delay-[100ms] transition-all"><a href="#About_Us">About Us</a></li>
+                </ul>
+              </nav>
+              <div>
+                <button id="LoginBtn" class="text-[16px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] mr-5 delay-[100ms] transition-all">Login</button>
+                <button id="SignUpBtn" class="text-[#F8F8FA] text-[16px] leading-normal bg-[#54BD95] py-[10px] px-[10px] rounded-[10px] hover:bg-[#37785f] delay-[100ms] transition-all">Sign up</button>
+              </div>
+          </div>
+        </div>
+      </header>
+      <!-- Modal SignUp -->
+      <div id="ModalLSignUp" class="modal fixed z-[1] left-0 top-0 w-[100%] h-[100%] pt-[50px] overflow-auto hidden">
+        <div class="bg-[#fefefe]  rounded-[5px] w-[30%] mx-auto lgMax:w-[50%] lg2:w-[60%] lgMax1:w-[40%]">
+            <div class="container">
+              <span id="BtnClose" class="close text-[#aaa] float-right text-[28px] mb-[30px] font-semibold">&times;</span>
+            <form class="model-content">
+              <input type="text" class="outline-none    font-normal  leading-4 text-[#212529] bg-clip-padding border-solid  rounded-[8px]" placeholder="Your name">
+              <input type="email" class="outline-none   font-normal  leading-4 text-[#212529] bg-clip-padding border-solid   rounded-[8px]" placeholder="rossmartin@gmail.com">
+              <input type="password" class="outline-none    font-normal  leading-4 text-[#212529] bg-clip-padding border-solid  rounded-[8px]" placeholder="Your password">
+              <button class="text-[#fff] bg-[#54BD95] w-[100%] pt-3 pb-3 rounded-[12px] hover:bg-[#37785f] delay-[100ms] transition-all text-[16px] text-center">Sign up</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Login -->
+    <div id="ModalLogin" class="modal fixed z-[1] left-0 top-0 w-[100%] h-[100%] pt-[50px] overflow-auto hidden">
+      <div class="bg-[#fefefe]  rounded-[5px] w-[30%] mx-auto lgMax:w-[50%] lg2:w-[60%] lgMax1:w-[40%]">
+          <div class="container">
+            <span id="BtnCloseLogin" class="close text-[#aaa] float-right text-[28px] mb-[30px] font-semibold">&times;</span>
+          <form class="model-content">
+            <input type="text" class="outline-none    font-normal  leading-4 text-[#212529] bg-clip-padding border-solid  rounded-[8px]" placeholder="Your name">
+            <input type="email" class="outline-none   font-normal  leading-4 text-[#212529] bg-clip-padding border-solid   rounded-[8px]" placeholder="rossmartin@gmail.com">
+            <input type="password" class="outline-none    font-normal  leading-4 text-[#212529] bg-clip-padding border-solid  rounded-[8px]" placeholder="Your password">
+            <input type="password" class="outline-none    font-normal  leading-4 text-[#212529] bg-clip-padding border-solid  rounded-[8px]" placeholder="Your password">
+            <button class="text-[#fff] bg-[#54BD95] w-[100%] pt-3 pb-3 rounded-[12px] hover:bg-[#37785f] delay-[100ms] transition-all text-[16px] text-center">Sign up</button>
+          </form>
+          </div>
+      </div>
+    </div>
+    <!-- Section Hero -->
+    <section>
+      <div class="max-w-[1280px] mx-auto flex justify-between mt-[130px]">
+        <div class="mr-9">
+          <div class="max-w-[555px]">
+            <h1 class="text-[#191A15] text-[80px] font-bold leading-[100px] mb-[30px]">We’re here to Increase your Productivity  </h1>
+            <img src="/images/f2.png" alt="">
+            <p class="text-[#000] text-[18px] font-medium leading-[30px] mt-[50px] max-w-[460px]">Let's make your work more organize and easily using the Taskio Dashboard with many of the latest featuresin managing work every day.</p>
+          </div>
+          <div class="max-w-[360px] flex justify-between mt-[50px]">
+            <button class="text-[#FFF] text-[18px] font-medium leading-normal bg-[#54BD95] px-[30px] py-5 rounded-[40px] hover:bg-[#37785f] delay-[100ms] transition-all">Try free trial</button>
+              <button class="flex items-center  gap-4 object-cover text-[#191A15] text-[18px] font-medium hover:mr-2 delay-[100ms] transition-all tube">
+                <img src="/images/Play.png" alt="" class="object-cover h-[40px] w-[40px] tube ">
+                <a href="https://www.youtube.com/watch?v=znwOhOtm6go">View Demo</a>
+              </button>
+          </div>
+        </div>
+        <div class="max-w-[700px]">
+          <img src="/images/f1.png" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- Section Collabs -->
+    <section>
+      <div class="max-w-[1180px] mx-auto mt-[130px]">
+        <h2 class="text-[#191A15] text-[40px] text-center font-bold mb-[60px]">More than 25,000 teams use Collabs</h2>
+        <div class="flex justify-between">
+          <img src="/images/f3.png" alt="">
+          <img src="/images/f4.png" alt="">
+          <img src="/images/f5.png" alt="">
+          <img src="/images/f6.png" alt="">
+          <img src="/images/f7.png" alt="">
+        </div>
+      </div>
+    </section>
     </div>
     <script type="module" src="/src/js/main.js"></script>
+              <script>
+              new WOW().init();
+              </script>
   </body>
 </html>
