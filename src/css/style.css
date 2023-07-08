@@ -24,7 +24,7 @@
     text-decoration: none;
     cursor: pointer;
   }
-  input[type=text], input[type=password],input[type=email] {
+  input[type=text], input[type=password], .email {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
