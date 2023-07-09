@@ -53,6 +53,13 @@
   border-right: 2px solid #7E2EA0;
   animation: typing 3s steps(12, end), cursor .4s steps(12, end) infinite;
 }
+@media (max-width: 960px) {
+  .typing {
+    border-right: none;
+    animation: none;
+  }
+}
+
 @keyframes typing {
   from { width: 0 }
 }
@@ -169,4 +176,40 @@
 .tabs-item.active {
   display: block;
   display: flex;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  height: 100%;
+  z-index: 99;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+
+  
+  padding: 80px 40px;
+
+  background-color: #0d081c;
+  transition: all 0.4s ease-in;
+  display: none;
+}
+
+.mobile-nav--open {
+  display: block;
+  left: 0;
+  align-items: center;
+}
+
+.mobile-nav__list {
+  display: grid;
+  gap: 20px;
+}
+
+
+
+.mobile-nav-fade--open {
+  opacity: 1;
+  pointer-events: all;
 }

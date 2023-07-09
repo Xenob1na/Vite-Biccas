@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,13 +10,13 @@
   </head>
   <body>
     <div id="app">
-      <header id="head" class="scale-in-ver-bottom">
-        <div class="max-w-[1180px] mx-auto mt-8">
+      <header id="head">
+        <div class="max-w-[1180px] mx-auto mt-8 lg:mx-5">
           <div class="flex justify-between items-center">
               <div>
                 <h4 class="text-[#54BD95] text-[50px] font-semibold"><a href="/">Biccas</a></h4>
               </div>
-              <nav class="items-center">
+              <nav class="items-center lg2:hidden">
                 <ul class="flex gap-10 items-center">
                   <li class="text-[18px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] delay-[100ms] transition-all"><a href="#Home">Home</a></li>
                   <li class="text-[18px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] delay-[100ms] transition-all"><a href="#Product">Product</a></li>
@@ -26,10 +25,28 @@
                   <li class="text-[18px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] delay-[100ms] transition-all"><a href="#About_Us">About Us</a></li>
                 </ul>
               </nav>
-              <div>
+              <!-- Burger Btn -->
+              <div class="hidden lg2:block mb-2 z-[999]">
+                <button class="relative h-9 text-xl  mt-1 BurgerBtn text-[#54BD95]" >
+                  &#9776;
+                </button>
+              </div>
+              <div class="lg2:hidden">
                 <button id="LoginBtn" class="text-[16px] text-[#000] font-medium leading-normal hover:text-[#A6A6A6] mr-5 delay-[100ms] transition-all">Login</button>
                 <button id="SignUpBtn" class="text-[#F8F8FA] text-[16px] leading-normal bg-[#54BD95] py-[10px] px-[10px] rounded-[10px] hover:bg-[#37785f] delay-[100ms] transition-all">Sign up</button>
               </div>
+          </div>
+        </div>
+        <!-- Burger menu -->
+        <div class="mobile-nav-fade">
+          <div class="mobile-nav">
+            <ul class="mobile-nav__list">
+              <li class="text-[18px] text-white font-medium leading-normal"><a href="#Home">Home</a></li>
+              <li class="text-[18px] text-white font-medium leading-normal"><a href="#Product">Product</a></li>
+              <li class="text-[18px] text-white font-medium leading-normal"><a href="#FAQ">FAQ</a></li>
+              <li class="text-[18px] text-white font-medium leading-normal"><a href="#Blog">Blog</a></li>
+              <li class="text-[18px] text-white font-medium leading-normal"><a href="#About_Us">About Us</a></li>
+            </ul>
           </div>
         </div>
       </header>
@@ -63,13 +80,13 @@
       </div>
     </div>
     <!-- Section Hero -->
-    <section class="scale-in-ver-bottom">
-      <div class="max-w-[1280px] mx-auto flex justify-between mt-[130px]  ">
-        <div class="mr-9 cssanimation leFlyInLeft sequence">
-          <div class="max-w-[555px]">
-            <h1 class="text-[#191A15] text-[80px] font-bold leading-[100px] mb-[30px] ">We’re here to Increase your <div class="typing">Productivity</div></h1>
-            <img src="/images/f2.png" alt="">
-            <p class="text-[#000] text-[18px] font-medium leading-[30px] mt-[50px] max-w-[460px]">Let's make your work more organize and easily using the Taskio Dashboard with many of the latest featuresin managing work every day.</p>
+    <section>
+      <div class="max-w-[1280px] mx-auto flex justify-between mt-[130px] lg2:mt-[100px]  lgMax2:px-5 lgMax2:block lgMax2:max-w-[1100px] lgMax2:mx-auto">
+        <div class="mr-9 lgMax2:mr-0">
+          <div class="max-w-[555px] lgMax2:max-w-[1000px] xs:max-w-[400px]">
+            <h1 class="text-[#191A15] text-[80px] lgMax2:text-[65px] lg2:text-[55px] sm:text-[40px] sm:leading-[60px] md:leading-[70px] xs:text-[50px]  md:text-[45px] font-bold leading-[100px] mb-[30px] ">We’re here to Increase your <div class="typing">Productivity</div></h1>
+            <img src="/images/f2.png" alt="" class="lgMax2:hidden">
+            <p class="text-[#000] text-[18px] font-medium leading-[30px] mt-[50px] max-w-[460px] lgMax2:max-w-[800px]">Let's make your work more organize and easily using the Taskio Dashboard with many of the latest featuresin managing work every day.</p>
           </div>
           <div class="max-w-[360px] flex justify-between mt-[50px]">
             <button class="text-[#FFF] text-[18px] font-medium leading-normal bg-[#54BD95] px-[30px] py-5 rounded-[40px] hover:bg-[#37785f] delay-[100ms] transition-all">Try free trial</button>
@@ -79,21 +96,21 @@
               </button>
           </div>
         </div>
-        <div class="max-w-[700px] cssanimation hu__hu__">
+        <div class="max-w-[700px] cssanimation hu__hu__ lgMax2:hidden">
           <img src="/images/f1.png" alt="">
         </div>
       </div>
     </section>
     <!-- Section Collabs -->
     <section>
-      <div class="max-w-[1180px] mx-auto mt-[130px]">
-        <h2 class="text-[#191A15] text-[40px] text-center font-bold mb-[60px]">More than 25,000 teams use Collabs</h2>
-        <div class="flex justify-between">
-          <img src="/images/f3.png" alt="">
-          <img src="/images/f4.png" alt="">
-          <img src="/images/f5.png" alt="">
-          <img src="/images/f6.png" alt="">
-          <img src="/images/f7.png" alt="">
+      <div class="max-w-[1180px] mx-auto mt-[130px] lg:mx-5">
+        <h2 class="text-[#191A15] md:max-w-[500px] md:mx-auto text-[40px] text-center font-bold mb-[60px]">More than 25,000 teams use Collabs</h2>
+        <div class="flex justify-between lg2:grid lg2:grid-cols-2   lg2:gap-5  lg2:max-w-[400px] lg2:mx-auto">
+          <img src="/images/f3.png" alt="" >
+          <img src="/images/f4.png" alt="" class="lg2:ml-7">
+          <img src="/images/f5.png" alt="" >
+          <img src="/images/f6.png" alt="" class="lg2:ml-7">
+          <img src="/images/f7.png" alt="" class="lg2:ml-[100px]">
         </div>
       </div>
     </section>
